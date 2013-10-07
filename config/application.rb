@@ -26,5 +26,27 @@ module SampleApp
     # config.i18n.default_locale = :de
 
     config.assets.precompile += %w(*.png *.jpg *.jpeg *.gif) #代码 5.4：添加一行代码，兼容 Asset Pipeline
+    config.assets.precompile << Proc.new do |path|
+      if path =~ /\.(css|js|scss|png|jpg|gif|json)\z/
+        full_path = Rails.application.assets.resolve(path).to_path
+        app_assets_path1 = Rails.root.join('app', 'assets').to_path
+        app_assets_path2 = Rails.root.join('public', 'assets').to_path
+        app_assets_path3 = Rails.root.join('vendor', 'assets').to_path
+
+        if full_path.starts_with? app_assets_path1
+          true
+        else
+          if full_path.starts_with? app_assets_path2
+            true
+          else
+            if full_path.starts_with? app_assets_path3
+              true
+            else
+              false
+            end
+          end
+        end
+      end
+    end
   end
 end
