@@ -24,5 +24,7 @@ module SampleApp
     # The default locale is :en and all translations from config/locales/*.rb,yml are auto loaded.
     # config.i18n.load_path += Dir[Rails.root.join('my', 'locales', '*.{rb,yml}').to_s]
     # config.i18n.default_locale = :de
+
+    config.assets.precompile += %w(*.png *.jpg *.jpeg *.gif) #代码 5.4：添加一行代码，兼容 Asset Pipeline
   end
 end
