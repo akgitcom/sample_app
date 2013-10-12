@@ -114,6 +114,10 @@ $grayMediumLight: #eaeaea;
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
 }
+<<<<<<< HEAD
+=======
+
+>>>>>>> sign-up
 /* miscellaneous */
 
 .debug_dump {
@@ -123,6 +127,10 @@ $grayMediumLight: #eaeaea;
   margin-top: 45px;
   @include box_sizing;
 }
+<<<<<<< HEAD
+=======
+
+>>>>>>> sign-up
 /* sidebar */
 
 aside {
@@ -152,6 +160,10 @@ aside {
   float: left;
   margin-right: 10px;
 }
+<<<<<<< HEAD
+=======
+
+>>>>>>> sign-up
 /* forms */
 
 input, textarea, select, .uneditable-input {
@@ -164,11 +176,16 @@ input, textarea, select, .uneditable-input {
 input {
   height: auto !important;
 }
+<<<<<<< HEAD
 .new_user{
   @include max_width;
 }
 #error_explanation {
   @include max_width;
+=======
+
+#error_explanation {
+>>>>>>> sign-up
   color: #f00;
   ul {
     list-style: none;
